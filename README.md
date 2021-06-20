@@ -1,34 +1,48 @@
 # a3
 
 How to run part A:
-1) open 2 terminals in file location
+1) open 3 terminals in file location
 2) For terminal 1: 
-	- docker run -it -v $PWD:/app --name twitter -w /app python bash
-	– pip install -U git+https://github.com/tweepy/tweepy.git
-	– python twitter_app.py
+    - docker run -it -v $PWD:/app --name twitter -w /app python bash
+    – pip install -U tweepy
+    – python twitter_app.py
 3) For terminal 2:
-	– docker run -it -v $PWD:/app --link twitter:twitter --link dashboard:dashboard eecsyorku/eecs4415
-	– spark-submit spark_app.py
+    - docker run -it -v $PWD:/app --name dashboard -w /app python bash
+    - python app.py
+4) For terminal 3:
+    – docker run -it -v $PWD:/app --link twitter:twitter --link dashboard:dashboard eecsyorku/eecs4415
+    – spark-submit spark_app.py
 
 How to run part B:
-1) open 2 terminals in file location
+1) open 3 terminals in file location
 2) For terminal 1: 
-	- docker run -it -v $PWD:/app --name twitter -w /app python bash
-	– pip install -U git+https://github.com/tweepy/tweepy.git
-	– python twitter_app.py
+    - docker run -it -v $PWD:/app --name twitter -w /app python bash
+    – pip install -U tweepy
+    – python twitter_app.py
 3) For terminal 2:
-	– docker run -it -v $PWD:/app --link twitter:twitter --link dashboard:dashboard eecsyorku/eecs4415
-	- pip install nltk
-	- python (go into python bash)
-		- import nltk
-		- nltk.download('vader_lexicon')
-		- exit() or ctrl+D 
-	– spark-submit sparkSentiment_app.py
+    - docker run -it -v $PWD:/app --name dashboard -w /app python bash
+    - python app.py
+4) For terminal 3:
+    – docker run -it -v $PWD:/app --link twitter:twitter --link dashboard:dashboard eecsyorku/eecs4415
+    - pip install nltk
+    - python (go into python bash)
+    - import nltk
+    - nltk.download('vader_lexicon')
+    - exit
+    – spark-submit spark_app.py
 
-How to run graph.py:
-	- open new cmd (or terminal) on local and go to file location
-	- py app.py (or python app.py)
-  
+
+Note: 
+If one is re-running a docker image you can restart old docker image by:
+1) Checking for list of docker: docker container list -a
+2) docker run "nameofDockerImage"
+3) docker exec -it "nameofDockerImage" bash
+
+In case there are errors installing nltk libraries:
+apt-get update
+apt-get install gcc
+apt-get install python-dev python3-dev
+apt-get install python-nltk
   
   
   
