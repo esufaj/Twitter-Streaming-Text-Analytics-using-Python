@@ -41,16 +41,6 @@ ssc.checkpoint("checkpoint_TwitterApp")
 # read data from port 9009
 dataStream = ssc.socketTextStream("twitter",9009)
 
-# reminder - lambda functions are just anonymous functions in one line:
-#
-#   words.flatMap(lambda line: line.split(" "))
-#
-# is exactly equivalent to
-#
-#    def space_split(line):
-#        return line.split(" ")
-#
-#    words.filter(space_split)
 
 # split each tweet into words
 words = dataStream.flatMap(lambda line: line.split(" "))
@@ -61,7 +51,8 @@ hashtags = words.filter(lambda w: '#' in w)
 #all hashtags to lower
 hashtags = hashtags.map(lambda x : x.lower())
 
-track = ['#nba', '#NBAPlayoffs', '#SportsGambling', '#Nets', "#RallyTheValley"]
+#list of hashtags that we specifically want
+track = ['#nba', '#NBAPlayoffs', '#apple', '#laclippers', "#euro2020"]
 track = [x.lower() for x in track]
 
 #filter hashtags to our own

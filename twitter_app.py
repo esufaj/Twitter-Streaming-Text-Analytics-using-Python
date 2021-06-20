@@ -103,7 +103,7 @@ auth.set_access_token(access_token, access_token_secret)
 stream = Stream(auth, listener)
 
 # setup search terms
-track = ['#nba', '#NBAPlayoffs', '#SportsGambling', '#Nets', "#RallyTheValley"]
+track = ['#nba', '#NBAPlayoffs', '#apple', '#laclippers', "#euro2020"]
 language = ['en']
 # locations = [-130,-20,100,50]
 

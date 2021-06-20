@@ -34,10 +34,10 @@ from tweepy import API
 from tweepy import Stream
 
 # Replace the values below with yours
-consumer_key="ZAPfZLcBhYEBCeRSAK5PqkTT7"
-consumer_secret="M81KvgaicyJIaQegdgXcdKDeZrSsJz4AVrGv3yoFwuItQQPMay"
-access_token="2591998746-Mx8ZHsXJHzIxAaD2IxYfmzYuL3pYNVnvWoHZgR5"
-access_token_secret="LJDvEa0jL7QJXxql0NVrULTAniLobe2TAAlnBdXRfm1xF"
+consumer_key="hPa3JWaL2uG6MMI0iPB9Pln5n"
+consumer_secret="sJvP8mAtGUfwLLJ07ah9zoXXNdKDCzVDrHseQRpeozR22ZOV8g"
+access_token="714640046888984577-CkHiYDE434EWtgcPeRUfqmRIHeGOhoC"
+access_token_secret="LNB7U0bStQ1eSHQzg1iaYrXqhjL7C5vdJbsZ0iJGyZVH1"
 
 
 class TweetListener(StreamListener):
@@ -46,7 +46,7 @@ class TweetListener(StreamListener):
         This listener prints tweets and then forwards them to a local port
         for processing in the spark app.
     """
-
+    #modified on_status function, to recieve full tweets instead of truncated ones
     def on_status(self, status):
         """When a tweet is received, forward it"""
         print ("------------------------------------------")
@@ -64,26 +64,6 @@ class TweetListener(StreamListener):
                 conn.send(str.encode(not_retweet + '\n'))
             except AttributeError:
                 print(status.text)
-        # try:
-
-        #     global conn
-
-        #     # load the tweet JSON, get pure text
-        #     full_tweet = json.loads(data)
-        #     tweet_text = full_tweet['text']
-
-        #     # print the tweet plus a separator
-        #     print ("------------------------------------------")
-        #     print(tweet_text + '\n')
-
-        #     # send it to spark
-        #     conn.send(str.encode(tweet_text + '\n'))
-        # except:
-
-        #     # handle errors
-        #     e = sys.exc_info()[0]
-        #     print("Error: %s" % e)
-
 
         return True
 
@@ -118,10 +98,11 @@ auth.set_access_token(access_token, access_token_secret)
 stream = Stream(auth, listener)
 
 # setup search terms
-track = ['#Hawks', '#BrooklynNets', '#Bucks', '#PhoenixSuns', '#LaClippers'
-         '#Apple', '#Microsoft', '#Google', '#Android', '#Nokia'
-         '#euro2020', '#Denmark', '#Belgium', '#Eriksen', '#Austria', '#Netherlands'
-         '#Science', '#SpaceX' '#Tesla', '#DataScience', '#NASA', '#climatechange'
+track = ['#hawks', '#brooklynNets', '#bucks', '#phoenixSuns', '#laclippers', '#miamiheat', '#knicks', '#celtics','#wizards', '#hornets'
+         '#apple', '#microsoft', '#google', '#Android', '#Nokia', '#amazon', '#google', '#sony', '#tencent', '#facebook'
+         '#euro2020', '#Denmark', '#Belgium', '#Eriksen', '#Austria', '#Netherlands', '#Portugal', '#Germany', '#France', '#Hungary'
+         '#Science', '#SpaceX' '#Tesla', '#DataScience', '#NASA', '#climatechange', '#moon', '#physics', '#chemistry', '#nature'
+         '#hamilton', '#vettel', '#perez', '#gasly', '#leclerc', '#norris', '#alonso', '#bottas', '#raikkonen', '#schumacher'
         ]
 language = ['en']
 # locations = [-130,-20,100,50]

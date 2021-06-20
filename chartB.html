@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Top Trending Twitter Hashtags</title>
+        <title>Sentiment Score of Top Trending Twitter Hashtags</title>
         <script src='static/Chart.js'></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -11,7 +11,7 @@
 
     <body>
         <center>
-            <h2>Top Trending Twitter Hashtags</h2>
+            <h2>Sentiment Score of Top Trending Twitter Hashtags</h2>
             <div style="width:700px;height=500px">
                 <canvas id="chart"></canvas>
             </div>
@@ -28,7 +28,7 @@
                               "{{item}}",
                              {% endfor %}],
                     datasets: [{
-                        label: '# of Mentions',
+                        label: 'Avg Sentiment Score',
                         data: [{% for item in values %}
                                   {{item}},
                                 {% endfor %}],

@@ -29,10 +29,9 @@ def update_data_post():
     global labels, values
     if not request.form or 'data' not in request.form:
         return "error",400
+    #recieve data from spark app
     info = ast.literal_eval(request.form['data'])
-    # print(info)
-    # labels = ast.literal_eval(request.form['label'])
-    # values = ast.literal_eval(request.form['data'])
+    #clear the labels and value list before every request so that the info does not append
     labels.clear()
     values.clear()
     for value in info:
