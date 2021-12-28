@@ -15,10 +15,6 @@
 
     (we don't do pip install tweepy because of a bug in the previous release)
     For more instructions on how to run, refer to final slides in tutorial 8
-
-    Made for: EECS 4415 - Big Data Systems (York University EECS dept.)
-    Author: Tilemachos Pechlivanoglou
-
 """
 
 # from __future__ import absolute_import, print_function
@@ -34,10 +30,10 @@ from tweepy import API
 from tweepy import Stream
 
 # Replace the values below with yours
-consumer_key="hPa3JWaL2uG6MMI0iPB9Pln5n"
-consumer_secret="sJvP8mAtGUfwLLJ07ah9zoXXNdKDCzVDrHseQRpeozR22ZOV8g"
-access_token="714640046888984577-CkHiYDE434EWtgcPeRUfqmRIHeGOhoC"
-access_token_secret="LNB7U0bStQ1eSHQzg1iaYrXqhjL7C5vdJbsZ0iJGyZVH1"
+consumer_key=""
+consumer_secret=""
+access_token=""
+access_token_secret=""
 
 
 class TweetListener(StreamListener):
