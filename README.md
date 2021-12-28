@@ -4,10 +4,13 @@
 
 #### **Operations that are performed in this app are:**
 
-    1) Identifying Trends - Certain hashtags are tracked in real time as tweets become available and organized based on popularity and occurence. These trends are then plotted again in real time on a graph.
+    1) Identifying Trends - Certain hashtags are tracked in real time as tweets become available and organized based on 
+    popularity and occurence. These trends are then plotted again in real time on a graph.
     
-    2) Sentiment Analysis - As in the fields of computational linguistics and natural language processing, I perform a sentiment analysis on tweets in order to determine the contextual polarity/emotional reaction of the user and tweet. A ranking of positive, negative pr neutral is given to the tweets using a scoring system and then plotted on a graph in real time.
-
+    2) Sentiment Analysis - As in the fields of computational linguistics and natural language processing, 
+    I perform a sentiment analysis on tweets in order to determine the contextual polarity/emotional reaction 
+    of the user and tweet. A ranking of positive, negative or neutral is given to the tweets using a 
+    scoring system and then plotted on a graph in real time.
 
 
 **How to run 1:**
