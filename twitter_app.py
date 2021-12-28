@@ -15,10 +15,6 @@
 
     (we don't do pip install tweepy because of a bug in the previous release)
     For more instructions on how to run, refer to final slides in tutorial 8
-
-    Made for: EECS 4415 - Big Data Systems (York University EECS dept.)
-    Author: Tilemachos Pechlivanoglou
-
 """
 
 # from __future__ import absolute_import, print_function
