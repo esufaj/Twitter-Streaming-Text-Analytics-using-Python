@@ -34,10 +34,10 @@ from tweepy import API
 from tweepy import Stream
 
 # Replace the values below with yours
-consumer_key="ZAPfZLcBhYEBCeRSAK5PqkTT7"
-consumer_secret="M81KvgaicyJIaQegdgXcdKDeZrSsJz4AVrGv3yoFwuItQQPMay"
-access_token="2591998746-Mx8ZHsXJHzIxAaD2IxYfmzYuL3pYNVnvWoHZgR5"
-access_token_secret="LJDvEa0jL7QJXxql0NVrULTAniLobe2TAAlnBdXRfm1xF"
+consumer_key=""
+consumer_secret=""
+access_token=""
+access_token_secret=""
 
 
 class TweetListener(StreamListener):
