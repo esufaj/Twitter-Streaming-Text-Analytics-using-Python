@@ -11,14 +11,6 @@
     and inside the docker:
 
         spark-submit spark_app.py
-
-    For more instructions on how to run, refer to final tutorial 8 slides.
-
-    Made for: EECS 4415 - Big Data Systems (York University EECS dept.)
-    Modified by: Tilemachos Pechlivanoglou
-    Based on: https://www.toptal.com/apache/apache-spark-streaming-twitter
-    Original author: Hanee' Medhat
-
 """
 
 from pyspark import SparkConf,SparkContext
