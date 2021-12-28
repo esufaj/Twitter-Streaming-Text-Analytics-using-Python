@@ -1,8 +1,8 @@
-# ** Twitter Real-Time Streaming Text Analytics **
+# **Twitter Real-Time Streaming Text Analytics**
 
 ### In this application I perform real time text analytics of Twitter data. Using Apache Spark, AJAX, NLTK, and Tweepy, I am able to perform a number of important operations of data that is extracted from the Tiwtter API.
 
-#### ** Operations that are performed in this app are: **
+#### **Operations that are performed in this app are:**
 
     1) Identifying Trends - Certain hashtags are tracked in real time as tweets become available and organized based on popularity and occurence. These trends are then plotted again in real time on a graph.
     
@@ -10,7 +10,7 @@
 
 
 
-** How to run 1: **
+**How to run 1:**
 1) open 3 terminals in file location
 2) For terminal 1: 
     - docker run -it -v $PWD:/app --name twitter -w /app python bash
@@ -23,7 +23,7 @@
     – docker run -it -v $PWD:/app --link twitter:twitter --link dashboard:dashboard eecsyorku/eecs4415
     – spark-submit spark_app.py
 
-** How to run 2: ** 
+**How to run 2:** 
 1) open 3 terminals in file location
 2) For terminal 1: 
     - docker run -it -v $PWD:/app --name twitter -w /app python bash
@@ -42,7 +42,7 @@
     – spark-submit spark_app.py
 
 
-** Note: ** 
+**Note:** 
 If one is re-running a docker image you can restart old docker image by:
 1) Checking for list of docker: docker container list -a
 2) docker run "nameofDockerImage"
