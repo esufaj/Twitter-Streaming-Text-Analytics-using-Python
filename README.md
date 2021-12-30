@@ -1,6 +1,6 @@
 # **Twitter Real-Time Streaming Text Analytics**
 
-### In this application I perform real time text analytics of Twitter data. Using Apache Spark, AJAX, NLTK, and Tweepy, I am able to perform a number of important operations of data that is extracted from the Tiwtter API.
+### In this application I perform real time text analytics of Twitter data. Using Apache Spark, AJAX, NLTK, and Tweepy, I am able to perform a number of important operations of data that is extracted from the Twitter API.
 
 #### **Operations that are performed in this app are:**
 
